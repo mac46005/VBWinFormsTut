@@ -1,10 +1,11 @@
 ﻿Public Class Form1
-
-
-    Dim Message As String = "This is a message string."
-    Dim integerValue As Integer = Message.Length
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        MessageBox.Show($"{Message}\n There are {integerValue} characters in the message string.")
+    Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
+        Dim valueOne As Integer = CInt(tbxValue01.Text)
+        Dim valueTwo As Integer = CInt(tbxValue02.Text)
+        If BasicComparisons.GreaterThan(valueOne, valueTwo) = True Then
+            lblAnswer.Text = "True"
+        Else
+            lblAnswer.Text = "False"
+        End If
     End Sub
 End Class
