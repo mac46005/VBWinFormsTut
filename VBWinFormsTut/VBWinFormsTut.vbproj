@@ -4,8 +4,9 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>VBWinFormsTut</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>VBWinFormsTut.Form1</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
+    <OptionExplicit>Off</OptionExplicit>
   </PropertyGroup>
 
   <ItemGroup>
