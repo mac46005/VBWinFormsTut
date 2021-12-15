@@ -1,13 +1,18 @@
 ﻿Imports System.Windows.Forms
 Public Class ProgressBarManipulatorViewModel
     ' properties
-    Private _increment As String
-    Public Property Increment() As String
+    Private _increment As Integer
+    Public Property Increment() As Integer
         Get
             Return _increment
         End Get
-        Set(ByVal value As String)
-            _increment = value
+        Set(ByVal value As Integer)
+            If value < 0 Then
+                Throw New Exception("Enter a number bigger than 0")
+            Else
+                _increment = value
+            End If
+
         End Set
     End Property
 
@@ -17,7 +22,12 @@ Public Class ProgressBarManipulatorViewModel
             Return _interval
         End Get
         Set(ByVal value As Integer)
-            _interval = value
+            If value < 0 Then
+                Throw New Exception("Please select a value bigger than 0!")
+            Else
+                _interval = value
+            End If
+
         End Set
     End Property
 
