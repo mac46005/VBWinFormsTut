@@ -43,4 +43,14 @@ Public Class IntArithmetic
     Public Shared Function Division(ByVal x As Integer, ByVal y As Integer) As Integer
         Return x / y
     End Function
+
+    ''' <summary>
+    ''' returns remainder of two integer types
+    ''' </summary>
+    ''' <param name="x"></param>
+    ''' <param name="y"></param>
+    ''' <returns></returns>
+    Public Shared Function Modulus(x As Integer, y As Integer)
+        Return x Mod y
+    End Function
 End Class
