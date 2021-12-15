@@ -31,7 +31,7 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.tbxInrement = New System.Windows.Forms.TextBox()
         Me.tbxInterval = New System.Windows.Forms.TextBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ProgressBarTimer = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'ProgressBar1
@@ -136,5 +136,5 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents tbxInrement As TextBox
     Friend WithEvents tbxInterval As TextBox
-    Friend WithEvents Timer1 As Timer
+    Friend WithEvents ProgressBarTimer As Timer
 End Class
