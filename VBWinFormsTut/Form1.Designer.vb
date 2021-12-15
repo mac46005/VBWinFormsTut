@@ -22,34 +22,35 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tbxValueOne = New System.Windows.Forms.TextBox()
+        Me.tbxValueTwo = New System.Windows.Forms.TextBox()
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.cbxInequalityOperators = New System.Windows.Forms.ComboBox()
+        Me.lblResult = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'tbxValueOne
         '
-        Me.TextBox1.Location = New System.Drawing.Point(50, 88)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(150, 31)
-        Me.TextBox1.TabIndex = 0
+        Me.tbxValueOne.Location = New System.Drawing.Point(50, 88)
+        Me.tbxValueOne.Name = "tbxValueOne"
+        Me.tbxValueOne.Size = New System.Drawing.Size(150, 31)
+        Me.tbxValueOne.TabIndex = 0
         '
-        'TextBox2
+        'tbxValueTwo
         '
-        Me.TextBox2.Location = New System.Drawing.Point(50, 197)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(150, 31)
-        Me.TextBox2.TabIndex = 1
+        Me.tbxValueTwo.Location = New System.Drawing.Point(50, 197)
+        Me.tbxValueTwo.Name = "tbxValueTwo"
+        Me.tbxValueTwo.Size = New System.Drawing.Size(150, 31)
+        Me.tbxValueTwo.TabIndex = 1
         '
-        'Button1
+        'btnSubmit
         '
-        Me.Button1.Location = New System.Drawing.Point(50, 294)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 62)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSubmit.Location = New System.Drawing.Point(50, 245)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(150, 62)
+        Me.btnSubmit.TabIndex = 2
+        Me.btnSubmit.Text = "Submit"
+        Me.btnSubmit.UseVisualStyleBackColor = True
         '
         'cbxInequalityOperators
         '
@@ -59,15 +60,25 @@ Partial Class Form1
         Me.cbxInequalityOperators.Size = New System.Drawing.Size(182, 33)
         Me.cbxInequalityOperators.TabIndex = 3
         '
+        'lblResult
+        '
+        Me.lblResult.AutoSize = True
+        Me.lblResult.Location = New System.Drawing.Point(88, 337)
+        Me.lblResult.Name = "lblResult"
+        Me.lblResult.Size = New System.Drawing.Size(92, 25)
+        Me.lblResult.TabIndex = 4
+        Me.lblResult.Text = "resultlabel"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblResult)
         Me.Controls.Add(Me.cbxInequalityOperators)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnSubmit)
+        Me.Controls.Add(Me.tbxValueTwo)
+        Me.Controls.Add(Me.tbxValueOne)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -75,8 +86,9 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents tbxValueOne As TextBox
+    Friend WithEvents tbxValueTwo As TextBox
+    Friend WithEvents btnSubmit As Button
     Friend WithEvents cbxInequalityOperators As ComboBox
+    Friend WithEvents lblResult As Label
 End Class
