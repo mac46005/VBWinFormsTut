@@ -8,6 +8,9 @@ Public Class Form1
     End Sub
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        barManipulator.Increment = CInt(tbxInrement.Text)
+        barManipulator.Interval = CInt(tbxInterval.Text)
+
         barManipulator.Start()
     End Sub
 
@@ -17,5 +20,9 @@ Public Class Form1
 
     Private Sub btnStopTimer_Click(sender As Object, e As EventArgs) Handles btnStopTimer.Click
         barManipulator.clear()
+    End Sub
+
+    Private Sub ProgressBarTimer_Tick(sender As Object, e As EventArgs) Handles ProgressBarTimer.Tick
+        barManipulator.Tick()
     End Sub
 End Class

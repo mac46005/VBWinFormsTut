@@ -7,8 +7,8 @@ Public Class ProgressBarManipulatorViewModel
             Return _increment
         End Get
         Set(ByVal value As Integer)
-            If value < 0 Then
-                Throw New Exception("Enter a number bigger than 0")
+            If value < 1 Then
+                Throw New Exception("Select a value bigger or equal to 1!")
             Else
                 _increment = value
             End If
@@ -22,8 +22,8 @@ Public Class ProgressBarManipulatorViewModel
             Return _interval
         End Get
         Set(ByVal value As Integer)
-            If value < 0 Then
-                Throw New Exception("Please select a value bigger than 0!")
+            If value < 1 Then
+                Throw New Exception("Select a value bigger than or equal to 1!")
             Else
                 _interval = value
             End If

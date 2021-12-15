@@ -52,6 +52,7 @@ Partial Class Form1
         '
         'btnStopTimer
         '
+        Me.btnStopTimer.Enabled = False
         Me.btnStopTimer.Location = New System.Drawing.Point(59, 403)
         Me.btnStopTimer.Name = "btnStopTimer"
         Me.btnStopTimer.Size = New System.Drawing.Size(112, 34)
@@ -61,6 +62,7 @@ Partial Class Form1
         '
         'btnStop
         '
+        Me.btnStop.Enabled = False
         Me.btnStop.Location = New System.Drawing.Point(59, 302)
         Me.btnStop.Name = "btnStop"
         Me.btnStop.Size = New System.Drawing.Size(112, 34)
@@ -101,6 +103,9 @@ Partial Class Form1
         Me.tbxInterval.Name = "tbxInterval"
         Me.tbxInterval.Size = New System.Drawing.Size(150, 27)
         Me.tbxInterval.TabIndex = 7
+        '
+        'ProgressBarTimer
+        '
         '
         'Form1
         '
