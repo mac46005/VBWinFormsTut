@@ -20,7 +20,7 @@ Public Class BasicArithmeticViewModel
             Return IntArithmetic.Multiplication(_ValueOne, _ValueTwo)
         ElseIf _arithmeticSymVal = listofops(3) Then
             Return IntArithmetic.Division(_ValueOne, _ValueTwo)
-        ElseIf _arithmeticSymVal = listofo ps(4) Then
+        ElseIf _arithmeticSymVal = listofops(4) Then
             Return IntArithmetic.Modulus(_ValueOne, _ValueTwo)
         Else
             Return 0

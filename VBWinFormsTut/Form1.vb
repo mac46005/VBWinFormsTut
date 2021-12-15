@@ -1,13 +1,20 @@
 ﻿Public Class Form1
-    Dim _bArithVM As BasicArithmeticViewModel
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cbxInequalityOperators.Items().AddRange(BasicArithmeticViewModel.listofops)
+    Private input As Integer
+    Private Sub btnMustSubmitRange_Click(sender As Object, e As EventArgs) Handles btnMustSubmitRange.Click
+        Try
+            input = CInt(tbxRange.Text)
+            btnMustSubmitRange.Enabled = False
+            btnSubmit.Enabled = True
+        Catch ex As InvalidCastException
+            MessageBox.Show("Please input an integer")
+        End Try
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
-        _bArithVM = New BasicArithmeticViewModel(CInt(tbxValueOne.Text), CInt(tbxValueTwo.Text), cbxInequalityOperators.SelectedItem)
-        Dim result As Integer = _bArithVM.Execute()
-        lblResult.Text = result.ToString()
+        Try
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
