@@ -17,21 +17,48 @@
             _guessInput = value
         End Set
     End Property
+    Private _isWinner As Boolean
 
-    Private answer As Integer
+    Public Property IsWinner() As Boolean
+        Private Set(value As Boolean)
+            _isWinner = value
+        End Set
+        Get
+            Return _isWinner
+        End Get
+    End Property
 
+    Private _answer As Integer
+    Public Property Answer() As Integer
+        Get
+            Return _answer
+        End Get
+        Private Set(ByVal value As Integer)
+            _answer = value
+        End Set
+    End Property
     ' constructor
     Public Sub New(range As Integer, input As Integer)
         GuessRange = range
         GuessInput = input
         Dim random As New Random()
-        answer = random.Next(GuessRange)
+        Answer = random.Next(GuessRange)
 
     End Sub
 
-    Public Function Result() As Integer
-        Dim intResult As Integer = 0
-        Return intResult
+    Public Function Execute() As Integer
+        Dim basicIniq As New BasicIntInequality()
+
+        If basicIniq.GreaterThan(GuessInput, GuessRange) = True Then
+            Throw New Exception("Input was out of range!" + ControlChars.Lf + "Input value within range specified by you the client :)")
+        End If
+        CheckForWin()
+        Return Answer
+    End Function
+
+    Public Function CheckForWin() As Boolean
+        Dim basicInequal As New BasicIntInequality()
+        Return basicInequal.EqualToo(_guessInput, Answer)
     End Function
 
 End Class
