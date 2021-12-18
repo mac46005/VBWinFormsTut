@@ -1,75 +1,50 @@
-﻿Imports System.Windows.Forms
-Public Class ProgressBarManipulatorViewModel
-    ' properties
+﻿Public Class ProgressBarManipulatorViewModel
+    Private _progressBar As ProgressBar
+    Private _timer As Timer
+    Private _interval As Integer
     Private _increment As Integer
+
     Public Property Increment() As Integer
         Get
             Return _increment
         End Get
-        Set(ByVal value As Integer)
-            If value < 1 Then
-                Throw New Exception("Select a value bigger or equal to 1!")
-            Else
-                _increment = value
-            End If
-
+        Set(value As Integer)
+            _increment = value
         End Set
     End Property
 
-    Private _interval As Integer
     Public Property Interval() As Integer
         Get
             Return _interval
         End Get
-        Set(ByVal value As Integer)
-            If value < 1 Then
-                Throw New Exception("Select a value bigger than or equal to 1!")
-            Else
-                _interval = value
-            End If
-
+        Set(value As Integer)
+            _interval = value
         End Set
     End Property
 
 
-    Private _timer As Timer
-    Private _progressBar As ProgressBar
+
 
 
     ' constructor
-    Public Sub New()
-
-    End Sub
-
-    Public Sub New(increment As Integer, interval As Integer, timer As Timer)
-        Me.Increment = increment
-        Me.Interval = interval
-        Me._timer = timer
-    End Sub
-    Public Sub New(ByRef timer As Timer, ByRef progressBar As ProgressBar)
-        _timer = timer
+    Public Sub New(ByRef progressBar As ProgressBar, ByRef timer As Timer)
         _progressBar = progressBar
+        _timer = timer
     End Sub
 
 
 
-    ' public methods
     Public Sub Start()
         _timer.Start()
     End Sub
 
-    Public Sub Pause()
+
+    Public Sub [Stop]()
         _timer.Stop()
     End Sub
 
-    Public Sub clear()
+    Public Sub Clear()
         _timer.Stop()
         _progressBar.Value = 0
-    End Sub
-
-
-    Public Sub Tick()
-        _timer.Interval = (Interval)
-        _progressBar.Increment(Increment)
     End Sub
 End Class

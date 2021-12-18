@@ -25,7 +25,7 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.btnStart = New System.Windows.Forms.Button()
-        Me.btnStopTimer = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.btnStop = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -50,15 +50,15 @@ Partial Class Form1
         Me.btnStart.Text = "Start"
         Me.btnStart.UseVisualStyleBackColor = True
         '
-        'btnStopTimer
+        'btnClear
         '
-        Me.btnStopTimer.Enabled = False
-        Me.btnStopTimer.Location = New System.Drawing.Point(59, 403)
-        Me.btnStopTimer.Name = "btnStopTimer"
-        Me.btnStopTimer.Size = New System.Drawing.Size(112, 34)
-        Me.btnStopTimer.TabIndex = 2
-        Me.btnStopTimer.Text = "Clear"
-        Me.btnStopTimer.UseVisualStyleBackColor = True
+        Me.btnClear.Enabled = False
+        Me.btnClear.Location = New System.Drawing.Point(59, 403)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(112, 34)
+        Me.btnClear.TabIndex = 2
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
         'btnStop
         '
@@ -120,7 +120,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnStop)
-        Me.Controls.Add(Me.btnStopTimer)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Font = New System.Drawing.Font("Niagara Engraved", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -135,7 +135,7 @@ Partial Class Form1
 
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents btnStart As Button
-    Friend WithEvents btnStopTimer As Button
+    Friend WithEvents btnClear As Button
     Friend WithEvents btnStop As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
