@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VBWinFormsTut", "VBWinFormsTut\VBWinFormsTut.vbproj", "{2C600F26-6526-4D0E-8A4F-2B6B3CF40124}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "VBWinFormsTut", "VBWinFormsTut\VBWinFormsTut.vbproj", "{2C600F26-6526-4D0E-8A4F-2B6B3CF40124}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VbTut.ClassLibrary", "VbTut.ClassLibrary\VbTut.ClassLibrary.vbproj", "{DC351D20-CCAB-48CD-8BE6-49D4F9483A33}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "VbTut.ClassLibrary", "VbTut.ClassLibrary\VbTut.ClassLibrary.vbproj", "{DC351D20-CCAB-48CD-8BE6-49D4F9483A33}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DemoDB", "DemoDB\DemoDB.sqlproj", "{DEFD388C-E4EC-4600-B64F-65FC6BFFC770}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{DC351D20-CCAB-48CD-8BE6-49D4F9483A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC351D20-CCAB-48CD-8BE6-49D4F9483A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC351D20-CCAB-48CD-8BE6-49D4F9483A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFD388C-E4EC-4600-B64F-65FC6BFFC770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFD388C-E4EC-4600-B64F-65FC6BFFC770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFD388C-E4EC-4600-B64F-65FC6BFFC770}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DEFD388C-E4EC-4600-B64F-65FC6BFFC770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFD388C-E4EC-4600-B64F-65FC6BFFC770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFD388C-E4EC-4600-B64F-65FC6BFFC770}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
